@@ -1,0 +1,106 @@
+#modals{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(110, 110, 110, 0.5);
+    top: 0;
+    left: 0;
+}
+
+#modals.active{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    display: flex;
+    flex-direction: row;
+}
+
+.dialog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    background: #313131;
+    color: #EEEEEE;
+}
+
+.dialog-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 30px;
+    background: #222222;
+    padding: 5px;
+}
+
+.dialog-name{
+    justify-self: flex-start;
+    padding: 2px 2px 2px 5px;
+    font-size: 14px;
+}
+
+.close-btn{
+    margin-left: auto;
+    justify-self: flex-end;
+    width: 20px;
+    height: 20px;
+    background-color: #980000;
+    background-image: url("../img/gui/icons/close_white.png");
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.close-btn:hover{
+    cursor: pointer;
+    background-color: #db0000;
+}
+
+.dialog-body input{
+    background: #494949;
+    border: 1px solid #222;
+    color: #BBB;
+    height: 25px;
+}
+
+.dialog-body{
+    width: 100%;
+    padding: 10px;
+}
+
+.dialog-row{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #BBB;
+}
+
+.dialog-row.last-buttons{
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.dialog-row.last-buttons input{
+    float: right;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.dialog-row.last-buttons input:hover{
+    cursor: pointer;
+    background: #696969;
+    text-align: center;
+}
+
+.rowLabel{
+    margin-right: 20px;
+}
+
+

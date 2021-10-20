@@ -1,0 +1,113 @@
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.f-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.none{
+    display: none;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.nowrap{
+    flex-wrap: nowrap;
+}
+
+.w100{
+    width: 100%;
+}
+
+.h100{
+    height: 100%;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.w-10{
+    width:10%;
+}
+
+.w-20{
+    width:20%;
+}
+
+.w-30{
+    width:30%;
+}
+
+.w-40{
+    width:40%;
+}
+
+.w-50{
+    width:50%;
+}
+
+.w-60{
+    width:60%;
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+input[type="text"]{
+    background: #323232;
+    border: 1px solid #222;
+    color: #BBB;
+}
+
+input[type="button"]{
+    background: #323232;
+    border: 1px solid #666666;
+    color: #BBB;
+    border-radius: 2px;
+    padding: 0 10px;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
+    background: #454545;
+}
+
+#workCanvas{
+    transition: all 0.5s;
+}
+
+#engine > #leftPanel *, #engine > #rightPanel *{
+    transition: all 0.2s;
+}

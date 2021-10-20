@@ -1,0 +1,290 @@
+#engine{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "top top top"
+    "left work right"
+    "bottom bottom bottom";
+}
+
+#topPanel{
+    width: 100%;
+    height: 65px;
+    background: #393939;
+    grid-area: top;
+}
+
+#topMenu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 30px;
+    background: #313131;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.menu-item{
+    position: relative;
+    height: 100%;
+    padding: 5px;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background: #494949;
+}
+
+.menu-item:hover .submenu, .submenu:hover{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    background: #292929;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.submenu-item{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 25px;
+    padding: 5px 10px;
+    width: 100%;
+    white-space: nowrap;
+    white-space: pre;
+}
+
+.submenu-item:hover{
+    background: #494949;
+}
+
+.webgine-icon{
+    width: 20px;
+    height: 20px;
+    background: url("../img/gui/icons/ico_webgine.png") no-repeat;
+    background-size: contain;
+}
+
+.project-name{
+    padding: 6px;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.project-name.no-project{
+    color: #696969;
+}
+
+#topTools{
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid #222;
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "tools1 canSize tools2";
+}
+
+#canvasResizer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-area: canSize;
+    font-size: 12px;
+}
+
+#canvasResizer label{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#canvasResizer input{
+    height: 20px;
+    max-width: 90px;
+    font-size: 12px;
+}
+
+
+#bottomPanel{
+    width: 100%;
+    height: 30px;
+    background: #393939;
+    grid-area: bottom;
+}
+
+#leftPanel{
+    width: 200px;
+    height: 100%;
+    background: #393939;
+    grid-area: left;
+}
+
+#elementsList{
+    width: 100%;
+}
+
+.panel-name{
+    width: 100%;
+    background: #313131;
+    padding: 5px;
+    height: 30px;
+    text-align: center;
+    color: #EEE;
+}
+
+.panel-elm{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.panel-elm:hover{
+    cursor: pointer;
+    background: #494949;
+}
+
+.panel-elm:hover .add-icon, .panel-elm .add-icon:hover{
+    opacity: 1;
+}
+
+.panel-elm .add-icon{
+    height: 20px;
+    width: 20px;
+    margin: -2px;
+    opacity: 0;
+    background-image: url("../img/gui/icons/add.svg");
+    background-size: contain;
+}
+
+#rightPanel{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    background: #393939;
+    grid-area: right;
+}
+
+.properties-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: 13px;
+    align-items: center;
+}
+
+.elm-property, .elm-property-val{
+    padding: 2px 10px;
+}
+
+.elm-property-val{
+    display: flex;
+    flex-direction: row;
+}
+
+.elm-property-val select{
+    background: #676767;
+    border: 1px solid #222;
+    color: #BBB;
+    height: 20px;
+}
+.elm-property-val input{
+    max-width: 120px;
+    margin-right: 10px
+}
+
+#elmTree, #elmSettings{
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#elmTree{
+    max-height: 50%;
+}
+
+#workspace{
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #292929;
+    grid-area: work;
+}
+
+.editorSelector{
+    display: none;
+    position: absolute;
+}
+
+.editorSelector.active{
+    display: block;
+}
+
+.sel-left, .sel-right{
+    height: 100%;
+    width: 0;
+    border-left: 1px dashed #007bbc;
+}
+
+.sel-top, .sel-bottom{
+    height: 0;
+    width: 100%;
+    border-top: 1px dashed #007bbc;
+}
+
+#workCanvas{
+    display: block;
+    background: url("../img/gui/transparent.svg");
+    background-size: 20px 20px;
+}
+
+.elm-tree{
+    max-width: 100%;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.proj-elm{
+    width: calc(100% - 8px);
+    margin-left:8px;
+    font-size: 13px;
+}
+
+.proj-elm .tree-elm:hover, .proj-elm .tree-elm.active{
+    background: rgba(255, 255, 255, 0.2)
+}
+
+.proj-elm .tree-elm{
+    display: block;
+    padding: 2px 2px;
+    margin-bottom: 2px;
+    border-left: 1px solid #666666;
+}
+
+
